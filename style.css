@@ -10,9 +10,54 @@ body {
     background-color: var(--light);
 }
 
+.cat-ipsum {
+    display: none;
+}
+
 .card {
     padding: 10px;
     margin: 10px;
+}
+
+
+.card p {
+    font-size: 1rem;
+}
+
+@media (min-width: 700px) and (orientation: landscape) {
+    .card p {
+        font-size: 1.2rem;
+    }
+
+    .cat-ipsum {
+        display: block;
+    }
+}
+
+@media (min-width: 1000px) and (orientation: landscape) {
+    .card p {
+        font-size: 1.4rem;
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+   body {
+        background-color: var(--dark);
+        color: var(--light)
+    }
+}
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.cat-name {
+    font-size: 2.25rem 
+}
+
+.content {
+    font-size: 1.5rem; 
 }
 
 img {
